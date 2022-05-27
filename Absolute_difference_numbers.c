@@ -1,0 +1,29 @@
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+    int n,m,d=0,arr[100],i=0,k,r,p,q,s;
+    scanf("%d%d",&n,&m);
+    d=int(log10(n));
+    r=int(log10(n));
+    while(d>=0)
+    {
+        k=n/int(pow(10,d));
+        arr[i]=k;
+        n=n%int(pow(10,d));
+        //printf("%d",arr[i]);
+        i++;
+        d--;
+    }
+    for(i=0;i<m;i++)
+    {
+      p=p*10+arr[i];
+    }
+    for(i=r-m+1;i<=r;i++)
+    {
+        q=q*10+arr[i];
+    }
+    //printf("%d,%d",p,q);
+    s=abs(q-p);
+    printf("%d",s);
+}
