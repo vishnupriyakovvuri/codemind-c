@@ -1,16 +1,24 @@
 #include<stdio.h>
+#include<math.h>
 int prime(int n)
 {
     int i,c=0;
-    for (i=2;i<=n/2;i++)
+    if(n==1 ||n==0)
     {
-        if(n%i==0)
+        c=1;
+    }
+    if(n>=2)
+    {
+        for(i=2;i<=sqrt(n);i++)
         {
-            c++;
-            break;
+            if(n%i==0)
+            {
+                c=1;
+                break;
+            }
         }
     }
-    if(c>0)
+    if(c==0)
     {
         return 1;
     }
@@ -21,23 +29,13 @@ int prime(int n)
 }
 int main()
 {
-    int n,i,c=1;
-    scanf("%d",&n);
-    if(n==1)
+    int m,i,c=0;
+    scanf("%d",&m);
+    for (i=1;i<=m;i++)
     {
-        printf("%d",1);
-    }
-    else
-    {
-        for(i=2;i<=n;i++)
+        if(m%i==0 && prime(i)==0)
         {
-            if(prime(i)==1)
-            {
-                if(n%i==0)
-                {
-                    c++;;
-                }
-            }
+            c++;
         }
     }
     printf("%d",c);
