@@ -3,18 +3,19 @@
 int prime(int n)
 {
     int i,c=0;
-    if(n<=1)
+    if(n==1 ||n==0)
     {
-        return 0;
+        c=1;
     }
-    else
+    if(n>=2)
     {
-    for(i=2;i<=sqrt(n);i++)
-    {
-        if(n%i==0)
+        for(i=2;i<=sqrt(n);i++)
         {
-            c++;
-            break;
+            if(n%i==0)
+            {
+                c=1;
+                break;
+            }
         }
     }
     if(c==0)
@@ -25,13 +26,12 @@ int prime(int n)
     {
         return 0;
     }
-    }
 }
 int main()
 {
     int n,m,i,c=0;
     scanf("%d%d",&n,&m);
-    for(i=n;i<=m;i++)
+    for (i=n;i<=m;i++)
     {
         if(prime(i)==1)
         {
