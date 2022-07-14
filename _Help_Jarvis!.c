@@ -1,0 +1,50 @@
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+    int t;
+    scanf("%d",&t);
+    while(t>0)
+    {
+        int n,d,c=1,r,a[100],i=0,j,k;
+        scanf("%d",&n);
+        d=log10(n)+1;
+        while(n!=0)
+        {
+            r=n%10;
+            a[i]=r;
+            i++;
+            n=n/10;
+        }
+        for(i=0;i<d-1;i++)
+        {
+            for(j=i+1;j<d;j++)
+            {
+                if(a[i]>a[j])
+                {
+                 k=a[i];
+                 a[i]=a[j];
+                 a[j]=k;
+                }
+            }
+        }
+        for(i=1;i<d;i++)
+        {
+            if(a[i]-a[i-1]==1)
+            {
+                c++;
+            }
+        }
+        if(c==d)
+        {
+            printf("YES
+");
+        }
+        else
+        {
+            printf("NO
+");
+        }
+        t--;
+    }
+}
