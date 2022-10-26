@@ -1,0 +1,38 @@
+#include<stdio.h>
+int main()
+{
+    int n,a[100],i,p,s=0,q=1000,j;
+    scanf("%d",&n);
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    for(i=0;i<n;i++)
+    {
+        p=0;
+        for(j=0;j<n;j++)
+        {
+            if(a[i]==a[j])
+            {
+                p+=1;
+            }
+        }
+        if(p>=s)
+        {
+            if(p==s)
+            {
+                if(a[i]<q)
+                {
+                q=a[i];
+                s=p;
+                }
+            }
+            else
+            {
+                q=a[i];
+                s=p;
+            }
+        }
+    }
+    printf("%d ",q);
+}
