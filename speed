@@ -1,0 +1,28 @@
+#include<stdio.h>
+int main()
+{
+    int t,l;
+    scanf("%d",&t);
+    for(l=0;l<t;l++)
+    {
+        int n,a[100],c=0,i;
+        scanf("%d",&n);
+        for(i=0;i<n;i++)
+        {
+            scanf("%d",&a[i]);
+        }
+        if(n>1)
+        {
+            for(i=0;i<n-1;i++)
+            {
+                if(a[i]>a[i+1])
+                {
+                    c+=1;
+                }
+            }
+        }
+        c+=1;
+        printf("%d\n",c);
+    }
+    
+}
