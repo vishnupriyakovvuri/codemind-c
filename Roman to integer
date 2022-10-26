@@ -1,0 +1,67 @@
+#include<stdio.h>
+int roman(char k)
+{ 
+    int p=0;
+    if (k=='I')
+    {
+        p=1;
+    }
+    else if(k=='V')
+    {
+        p=5;
+    }
+    else if(k=='X')
+    {
+        p=10;
+    }
+    else if(k=='L')
+    {
+        p=50;
+    }
+    else if(k=='C')
+    {
+        p=100;
+    }
+    else if(k=='D')
+    {
+        p=500;
+    }
+    else if(k=='M')
+    {
+        p=1000;
+    }
+    else
+    {
+        p=0;
+    }
+    return p;
+}
+int main()
+{
+    char s[100],t[100],l;
+    int i,c=0,j=0,q=0,p=0;
+    scanf("%s",s);
+    for(i=0;s[i]!='\0';i++)
+    {
+        c+=1;
+    }
+    for(i=c-1;i>=0;i--)
+    {
+        t[j]=s[i];
+        j+=1;
+    }
+    for(i=0;i<j;i++)
+    {
+        l=t[i];
+       if(roman(l)>=p)
+       {
+           q+=roman(l);
+       }
+       else
+       {
+           q-=roman(l);
+       }
+       p=roman(l);
+    }
+    printf("%d",q);
+}
