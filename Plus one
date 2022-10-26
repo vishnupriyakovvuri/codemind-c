@@ -1,0 +1,22 @@
+#include<stdio.h>
+int main()
+{
+    int m,i,p=0,a[100],b[100],j=0;
+    scanf("%d",&m);
+    for(i=0;i<m;i++)
+    {
+        scanf("%d",&a[i]);
+        p=p*10+a[i];
+    }
+    p=p+1;
+    while(p!=0)
+    {
+        b[j]=p%10;
+        p=p/10;
+        j+=1;
+    }
+    for(i=j-1;i>=0;i--)
+    {
+        printf("%d ",b[i]);
+    }
+}
