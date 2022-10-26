@@ -1,0 +1,32 @@
+#include<stdio.h>
+int main()
+{
+    int n,a[100],i,b[100],c[100],j=0,k=0;
+    scanf("%d",&n);
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    for(i=0;i<n;i++)
+    {
+        if(a[i]==0)
+        {
+            b[j]=a[i];
+            j+=1;
+        }
+        if(a[i]==1)
+        {
+            c[k]=a[i];
+            k+=1;
+        }
+    }
+    for(i=0;i<k;i++)
+    {
+        b[j]=c[i];
+        j+=1;
+    }
+    for(i=0;i<j;i++)
+    {
+        printf("%d ",b[i]);
+    }
+}
