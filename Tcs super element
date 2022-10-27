@@ -1,0 +1,57 @@
+#include<stdio.h>
+int main()
+{
+    int t,l;
+    scanf("%d",&t);
+    for(l=0;l<t;l++)
+    {
+        int k,n;
+        scanf("%d",&k);
+        n=k%296;
+        if(n>296)
+        {
+            n=n-296;
+        }
+        if(n%10==0)
+        {
+        printf("sunday\n");
+        }
+    else if(n%10==1)
+    {
+        printf("monday\n");
+    }    
+    else if(n%10==2)
+    {
+        printf("tuesday\n");
+    }
+    else if(n%10==3)
+    {
+        printf("wednesday\n");
+    }    
+    else if(n%10==4)
+    {
+        printf("thursday\n");
+    }    
+    else if(n%10==5)
+    {
+        printf("friday\n");
+    }    
+    else if(n%10==6)
+    {
+        printf("saturday\n");
+    }
+    else if(n%10==7)
+    {
+        printf("kryptonday\n");
+    }
+    else if(n%10==8)
+    {
+        printf("coluday\n");
+    }
+    else if(n%10==9)
+    {
+        printf("daxamday\n"); 
+    }
+        
+    }
+}
