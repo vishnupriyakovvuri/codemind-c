@@ -1,0 +1,32 @@
+#include<stdio.h>
+int main()
+{
+    int t,i;
+    scanf("%d",&t);
+    for(i=0;i<t;i++)
+    {
+        char s[100];
+        int k=0,j;
+        scanf("%s",s);
+        for(j=0;s[j]!='\0';j++)
+        {
+            if(s[j]>=48 &&s[j]<=57)
+            {
+                continue;
+            }
+            else
+            {
+                k=1;
+                break;
+            }
+        }
+       if(k==1)
+       {
+           printf("False\n");
+       }
+       else
+       {
+           printf("True\n");
+       }
+    }
+}
