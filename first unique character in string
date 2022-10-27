@@ -1,0 +1,25 @@
+#include<stdio.h>
+int main()
+{
+    char s[100];
+    int k,i,j,p=-1;
+    scanf("%s",s);
+    for(i=0;s[i]!='\0';i++)
+    {
+        k=0;
+        for(j=0;s[j]!='\0';j++)
+        {
+            if(s[i]==s[j])
+            {
+                k+=1;
+            }
+        }
+        if(k==1)
+        {
+            p=i;
+            break;
+        }
+    }
+        printf("%d",p);
+    
+}
