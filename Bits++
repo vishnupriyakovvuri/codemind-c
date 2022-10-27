@@ -1,0 +1,21 @@
+#include<stdio.h>
+int main()
+{
+    int t,i,x=0;
+    scanf("%d",&t);
+    for(i=0;i<t;i++)
+    {
+        char s[100],k;
+        scanf("%s",s);
+        k=s[1];
+        if(k=='+')
+        {
+            x+=1;
+        }
+        else if(k=='-')
+        {
+            x-=1;
+        }
+    }
+    printf("%d",x);
+}
