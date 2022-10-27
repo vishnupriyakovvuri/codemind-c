@@ -1,0 +1,27 @@
+#include<stdio.h>
+int main()
+{
+    int t,l;
+    scanf("%d",&t);
+    for(l=0;l<t;l++)
+    {
+        char s[100];
+        int i,k=0;
+        scanf("%s",s);
+        for(i=0;s[i]!='\0';i++)
+        {
+            if(int(s[i])>=48 && int(s[i])<=56)
+           {
+            k+=1;
+           }
+        }
+        if(k!=0)
+        {
+            printf("Yes\n");
+        }
+        else
+        {
+            printf("No\n");
+        }
+    }
+}
