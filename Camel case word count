@@ -1,0 +1,15 @@
+#include<stdio.h>
+int main()
+{
+    char s[100];
+    scanf("%s",s);
+    int c=1,i;
+    for(i=1;s[i]!='\0';i++)
+    {
+        if(int(s[i])>=65 && int(s[i])<=91)
+        {
+            c+=1;
+        }
+    }
+    printf("%d",c);
+}
