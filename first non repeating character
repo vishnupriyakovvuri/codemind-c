@@ -1,0 +1,36 @@
+#include<stdio.h>
+int main()
+{
+    int t,l;
+    scanf("%d",&t);
+    for(l=0;l<t;l++)
+    {
+        char s[100];
+        int i,j,k=0,n;
+        scanf("%d",&n);
+        scanf("%s",s);
+        for(i=0;s[i]!='\0';i++)
+        {
+            k=0;
+            if(int(s[i])>=65 && int(s[i])<=91 ||int(s[i])>=97 && int(s[i])<=122)
+            {
+            for(j=0;s[j]!='\0';j++)
+            {
+                if(s[i]==s[j])
+                {
+                    k+=1;
+                }
+            }
+            }
+            if(k==1)
+            {
+                printf("%c\n",s[i]);
+                break;
+            }
+        }
+        if(k!=1)
+        {
+            printf("%d\n",-1);
+        }
+    }
+}
