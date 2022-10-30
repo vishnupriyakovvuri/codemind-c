@@ -1,0 +1,27 @@
+#include<stdio.h>
+int main()
+{
+    int l,t,k;
+    scanf("%d",&l);
+    scanf("%d",&t);
+    for(k=0;k<t;k++)
+    {
+        int w,h;
+        scanf("%d%d",&w,&h);
+        if(w<l ||h<l)
+        {
+            printf("UPLOAD ANOTHER\n");
+        }
+        else 
+        {
+            if(w==h)
+            {
+                printf("ACCEPTED\n");
+            }
+            else
+            {
+                printf("CROP IT\n");
+            }
+        }
+    }
+}
